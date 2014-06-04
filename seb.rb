@@ -20,7 +20,7 @@ def parse_description(description, counterparty_name)
     output = counterparty_name + " " + output if counterparty_name != "SEB"
   end
 
-  output.trim
+  output.strip
 end
 
 CSV.open(ARGV[0] + ".freeagent", "wb") do |output|
